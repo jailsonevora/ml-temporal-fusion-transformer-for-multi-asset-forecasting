@@ -1,15 +1,10 @@
 # Temporal Fusion Transformer For Multi Asset Forecasting
 
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
-
-A short description of the project.
+A deep learning project that applies the Temporal Fusion Transformer architecture to predict prices and trends across multiple financial assets. Combines attention mechanisms, interpretable time-series modeling, and multi-horizon forecasting to deliver accurate, explainable market insights.
 
 ## Project Organization
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
 ├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
@@ -19,6 +14,8 @@ A short description of the project.
 │   └── raw            <- The original, immutable data dump.
 │
 ├── docs               <- A default mkdocs project; see www.mkdocs.org for details
+│
+├── deployment         <- Serving, Docker, API, CI/CD, etc.
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
@@ -54,6 +51,17 @@ A short description of the project.
     │   ├── predict.py          <- Code to run model inference with trained models          
     │   └── train.py            <- Code to train models
     │
+    |
+    ├── pipelines               <- End-to-end training / inference pipelines
+    │   ├── __init__.py 
+    │   ├── test_pipeline.py             
+    │   └── train_pipeline.py   
+    |
+    ├── utils                   <- Helpers: logging, metrics, etc.
+    │   ├── __init__.py 
+    |   ├── model
+    |   │   ├── __init__.py 
+    |
     └── plots.py                <- Code to create visualizations
 ```
 
